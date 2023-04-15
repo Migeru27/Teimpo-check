@@ -68,14 +68,14 @@ function currentWeather(city){
             console.log(sCity);
             if (sCity==null){
                 sCity=[];
-                sCity.push(city.toUpperCase()
+                sCity.push(city.toLowerCase()
                 );
                 localStorage.setItem("cityname",JSON.stringify(sCity));
                 addToList(city);
             }
             else {
                 if(find(city)>0){
-                    sCity.push(city.toUpperCase());
+                    sCity.push(city.toLowerCase());
                     localStorage.setItem("cityname",JSON.stringify(sCity));
                     addToList(city);
                 }
@@ -124,9 +124,9 @@ function forecast(cityid){
 
 //Daynamically add the passed city on the search history
 function addToList(c){
-    var listEl= $("<li>"+c.toUpperCase()+"</li>");
+    var listEl= $("<li>"+c.toLowerCase()+"</li>");
     $(listEl).attr("class","list-group-item");
-    $(listEl).attr("data-value",c.toUpperCase());
+    $(listEl).attr("data-value",c.toLowerCase());
     $(".list-group").append(listEl);
 }
 // display the past search again when the list group item is clicked in search history

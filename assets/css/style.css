@@ -8,15 +8,29 @@ body {
     
     font-size: 16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #333;
     
 }
 h3{
     font-weight: bold;
+    color: #fff;
+}
+
+p{
+    color: #fff;
+}
+h4{
+    color: #fff;
 }
 .forecast{
     
     font-size: 0.9em;
 }
+.list-group{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 span{
     font-size: 1em;
 }
